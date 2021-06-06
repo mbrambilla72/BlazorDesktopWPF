@@ -1,15 +1,18 @@
 ﻿@namespace BlazorDesktopWPF
 @using Microsoft.AspNetCore.Components.Web
 
+@page "/counter"
+
 <h1>Counter</h1>
 
-<p>The current count is: @currentCount</p>
-<button @onclick="IncrementCount">Count</button>
+<p>Current count: @currentCount</p>
+
+<button class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700" @onclick="IncrementCount">Click me</button>
 
 @code {
-    int currentCount = 1;
+    private int currentCount = 0;
 
-    void IncrementCount()
+    private void IncrementCount()
     {
         currentCount++;
     }
